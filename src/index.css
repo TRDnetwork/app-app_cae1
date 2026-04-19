@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@layer components {
+  .container {
+    @apply max-w-container mx-auto px-4;
+  }
+  
+  .text-dim {
+    @apply text-text-dim;
+  }
+  
+  .focus-glow:focus {
+    @apply outline-2 outline-accent outline-offset-2;
+  }
+  
+  .hover-lift {
+    @apply transition-transform duration-300 ease-md hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  .toast {
+    @apply fixed top-4 left-1/2 transform -translate-x-1/2 bg-text text-white px-6 py-3 rounded-md shadow-lg z-50;
+  }
+  
+  .toast.fade-out {
+    @apply opacity-0 pointer-events-none;
+  }
+}

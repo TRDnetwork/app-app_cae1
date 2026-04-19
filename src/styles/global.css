@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Satoshi:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: var(--letter-spacing-heading);
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  h1 { font-size: var(--text-5xl); }
+  h2 { font-size: var(--text-4xl); }
+  h3 { font-size: var(--text-3xl); }
+  h4 { font-size: var(--text-2xl); }
+  p {
+    line-height: var(--line-height-normal);
+    color: var(--color-text-dim);
+    max-width: 65ch;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .text-center {
+    @apply text-center;
+  }
+  .btn {
+    @apply inline-flex items-center font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  .card {
+    @apply bg-white rounded-xl border border-surface p-6 shadow-sm hover:shadow-md transition-all duration-200;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.3s ease-out;
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -10px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+}

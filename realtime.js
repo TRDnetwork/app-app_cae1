@@ -1,0 +1,1 @@
+// No realtime functionality needed for static site
