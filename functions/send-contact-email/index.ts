@@ -1,0 +1,1 @@
+-- Not applicable — contact form backend is owned by Email Agent as Vercel serverless function, not Supabase Edge Function.

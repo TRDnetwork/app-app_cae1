@@ -1,0 +1,1 @@
+-- No database required — app is static. Contact form handled by Email Agent via Vercel serverless function (api/contact.ts) using Resend. No Supabase services used.
